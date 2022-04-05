@@ -1,1 +1,0 @@
-{"mappings":"AAAA;;;;;AAKA","sources":["src/index.css"],"sourcesContent":[".runner-custom-class {\n  display: block;\n  background-color: antiquewhite !important;\n}\n\n.runner-custom-class div[data-block=\"tripetto-block-date\"] h2 {\n  color: red !important;\n}\n"],"names":[],"version":3,"file":"tripetto-runner-poc.61d3354a.css.map","sourceRoot":"/__parcel_source_root/"}

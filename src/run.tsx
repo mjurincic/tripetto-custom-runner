@@ -125,12 +125,12 @@ export async function run(props: IAutoscroll): Promise<IAutoscrollRunner> {
 
         // window.addEventListener("unload", localSnapshot.save);
         // window.addEventListener("pagehide", localSnapshot.save);
-        // window.addEventListener("visibilitychange", localSnapshot.save);
-        document.onvisibilitychange = function() {
-            if (document.visibilityState === 'hidden') {
-                localSnapshot.save()
-            }
-        };
+        document.addEventListener("visibilitychange", localSnapshot.save);
+        // document.onvisibilitychange = function() {
+        //     if (document.visibilityState === 'hidden') {
+        //         localSnapshot.save()
+        //     }
+        // };
     }
 
     ReactDOM.render(
@@ -246,7 +246,7 @@ export async function run(props: IAutoscroll): Promise<IAutoscrollRunner> {
             ReactDOM.unmountComponentAtNode(element);
 
             if (props.persistent && isLive && typeof window !== "undefined" && localStorage) {
-                window.removeEventListener("unload", localSnapshot.save);
+                document.removeEventListener("visibilitychange", localSnapshot.save);
             }
         },
     };

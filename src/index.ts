@@ -4,7 +4,7 @@ import {IDefinition, Export} from "tripetto-runner-foundation";
 import {run} from "./run"
 
 const {definition, onSubmit, styles} = Services.init({token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiTHJjSTdMY0FsQmZuNjkwdVJiOEVScENTdmtHK2lNWnRCTEJXMmpFdTZtMD0iLCJkZWZpbml0aW9uIjoiZlUyK3BvakJra1lmUWxRaXlOYXlVWXRIMGNLYUJQa1BlTmEwTzkyN3hkdz0iLCJ0eXBlIjoiY29sbGVjdCJ9.6Otd8UDsB-rzFnrifL9AsG5RVYqL2c5Tl2BQTz30ELo"});
-const runnerElement = document.getElementById("runner");
+const runnerElement = document.body;
 const SNAPSHOT = "tripetto-poc-snapshot";
 const snapshot = JSON.parse(localStorage.getItem(SNAPSHOT) || "null") || undefined;
 

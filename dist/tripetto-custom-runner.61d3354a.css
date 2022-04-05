@@ -1,0 +1,10 @@
+.runner-custom-class {
+  display: block;
+  background-color: #faebd7 !important;
+}
+
+.runner-custom-class div[data-block="tripetto-block-date"] h2 {
+  color: red !important;
+}
+
+/*# sourceMappingURL=tripetto-custom-runner.61d3354a.css.map */

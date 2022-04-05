@@ -2391,4 +2391,5 @@ run({
     definition: definitionLocal,
     styles: stylesLocal,
     onSubmit: onSubmit,
+    persistent: true
 });

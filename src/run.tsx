@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom";
-import { IDefinition, ISnapshot, L10n, TL10n, fingerprint, isFunction } from "tripetto-runner-foundation";
+import { IDefinition, ISnapshot, L10n, TL10n, fingerprint, isFunction, mountNamespace } from "tripetto-runner-foundation";
 import { TRunnerPreviewData, TRunnerViews } from "tripetto-runner-react-hook";
 import {
     AutoscrollRunner,
@@ -11,8 +11,8 @@ import {
     namespace
 } from "tripetto-runner-autoscroll";
 
-declare const PACKAGE_NAME: string;
-declare const PACKAGE_VERSION: string;
+const PACKAGE_NAME: string = "tripetto-runner-autoscroll";
+const PACKAGE_VERSION: string = "5.7.1";
 
 /** This counter is incremented on each run. */
 let runCounter = 0;
@@ -128,7 +128,7 @@ export async function run(props: IAutoscroll): Promise<IAutoscrollRunner> {
         // window.addEventListener("visibilitychange", localSnapshot.save);
         document.onvisibilitychange = function() {
             if (document.visibilityState === 'hidden') {
-                localSnapshot.save
+                localSnapshot.save()
             }
         };
     }

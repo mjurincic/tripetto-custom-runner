@@ -3,7 +3,8 @@
 # dependencies
 /node_modules
 /.pnp
-/.parcel-cache/
+/.parcel-cache
+/.idea
 .pnp.js
 
 # testing

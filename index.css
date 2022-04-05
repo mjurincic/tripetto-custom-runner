@@ -1,0 +1,8 @@
+.runner-custom-class {
+  display: block;
+  background-color: antiquewhite !important;
+}
+
+.runner-custom-class div[data-block="tripetto-block-date"] h2 {
+  color: red !important;
+}
